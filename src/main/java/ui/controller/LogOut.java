@@ -9,7 +9,7 @@ public class LogOut extends RequestHandler {
     @Override
     public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.getSession().invalidate();
-        response.sendRedirect("Controller?command=Home");
-        return "Controller?command=Home";
+        response.sendRedirect("Controller?action=Home");
+        return "Controller?action=Home";
     }
 }

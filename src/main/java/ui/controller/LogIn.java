@@ -19,7 +19,7 @@ public class LogIn extends RequestHandler {
         User user = new User(role.getStringValue(), role);
 
         request.getSession().setAttribute("user", user);
-        response.sendRedirect("Controller?command=Home");
-        return "Controller?command=Home";
+        response.sendRedirect("Controller?action=Home");
+        return "Controller?action=Home";
     }
 }
