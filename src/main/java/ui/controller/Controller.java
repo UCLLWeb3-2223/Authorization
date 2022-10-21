@@ -60,7 +60,7 @@ public class Controller extends HttpServlet {
             // alle handlers gooien een NotAuthorizedException als gebruiker niet de juiste rechten heeft
             // zodat authorization altijd op dezelfde manier afgehandeld wordt
             request.setAttribute("notAuthorized", "You have insufficient rights to have a look at the requested page.");
-            destination = controllerFactory.getController("Home").handleRequest(request, response);
+            destination = "Controller?action=Home";
         }
         if (!response.isCommitted()) {
             request.getRequestDispatcher(destination).forward(request, response);
